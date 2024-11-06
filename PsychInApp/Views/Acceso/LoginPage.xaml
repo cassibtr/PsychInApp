@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsychInApp.Views.Acceso.LoginPage"
+             Title="Login"
+             BackgroundImageSource="https://i.ibb.co/d2Hf63Q/peri.jpg">
+
+    <StackLayout>
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto">
+            <StackLayout Grid.Row="4">
+                <Label Text="Ingrese su Usuario: " 
+                       TextColor="White" FontSize="20"
+                       HorizontalTextAlignment="Center" 
+                       FontAttributes="Bold"/>
+                <Frame BackgroundColor="White" 
+                       Margin="15"
+                       Padding="0" 
+                       CornerRadius="50">
+                    <Frame BackgroundColor="White" 
+                           Margin="15"
+                           Padding="25,0,25,0" 
+                           HeightRequest="60" 
+                           CornerRadius="50">
+                        <Entry Placeholder="Usuario" 
+                               PlaceholderColor="White" 
+                               x:Name="TxtUsuario" 
+                               Text="{Binding TxtUsuario}"
+                               TextColor="#000000" 
+                               FontSize="20"/>
+                    </Frame>
+                </Frame>
+                <Label Text="Ingrese su Contraseña: " 
+                       TextColor="White" FontSize="20"
+                       HorizontalTextAlignment="Center" 
+                       FontAttributes="Bold"/>          
+                <Frame BackgroundColor="White" 
+                       Margin="15"
+                       Padding="0" 
+                       CornerRadius="50">
+                    <Frame BackgroundColor="White" 
+                           Margin="15"
+                           Padding="25,0,25,0" 
+                           HeightRequest="60" 
+                           CornerRadius="50">
+                        <Entry Placeholder="Password" 
+                               PlaceholderColor="White" 
+                               x:Name="TxtPassword" 
+                               Text="{Binding TxtPassword}"
+                               TextColor="#000000" 
+                               FontSize="20"
+                               IsPassword="True"/>
+                    </Frame>
+                </Frame>
+                <RelativeLayout Padding="25">
+                    <CheckBox
+                        Color="White"
+                        IsChecked="False"
+                        CheckedChanged="CheckBox_CheckedChanged"
+                        x:Name="CheckBox"
+                        Margin="15,0,15,0"/>
+                    <Label Text="Mostrar Contraseña" 
+                           TextColor="White" 
+                           FontSize="18"
+                           RelativeLayout.XConstraint="50"
+                           RelativeLayout.YConstraint="3"/>
+                </RelativeLayout>
+                <StackLayout>
+                    <!--<Button x:Name="TxtRegistrarse"
+                            Text="Registrarse" 
+                            TextColor="White" FontSize="20"
+                            BorderWidth="2" BorderColor="White"
+                            Margin="10,0,10,0"
+                            HeightRequest="60" 
+                            CornerRadius="60"
+                            BackgroundColor="#f3a3a8"
+                            Clicked="TxtRegistrarse_Clicked"
+                            Clicked="TxtIngresar_Clicked"
+                            TextTransform="None"/>-->
+                    <Button x:Name="TxtIngresar"
+                            Command="{Binding LoginCommand}"
+                        Text="Ingresar" 
+                        TextColor="White" FontSize="20"
+                        BorderWidth="2" BorderColor="White"
+                        BackgroundColor="#659db3"
+                        Margin="10,0,10,0"
+                        HeightRequest="60" 
+                        CornerRadius="50"
+                        
+                        TextTransform="None"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

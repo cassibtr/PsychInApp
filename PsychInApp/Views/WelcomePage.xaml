@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsychInApp.Views.WelcomePage"
+             Title="Welcome" 
+             BackgroundImageSource="https://i.ibb.co/VqTNXNn/sky.jpg">
+    
+    <StackLayout>
+
+        <StackLayout HorizontalOptions="Center" Margin="0,25">
+            <Label/>
+            <Label Text="Inicia este viaje y..." FontSize="22" TextColor="White"/>
+            <Label/>
+            <Label Text="Descúbrete" FontSize="30" TextColor="White"/>
+        </StackLayout>
+
+        <StackLayout Margin="0,10">
+            <Image Source="https://i.ibb.co/gwVBNTd/mental-health.png" 
+                    HeightRequest="300" 
+                    WidthRequest="300"/>
+
+        </StackLayout>
+
+        <StackLayout Margin="0,10">
+            <Button x:Name="Siguiente" Clicked="Siguiente_Clicked"
+                    BackgroundColor="#659db3" TextColor="White"
+                    Text="Empezar" HorizontalOptions="FillAndExpand" />   
+        </StackLayout>
+        
+
+    </StackLayout>
+    
+</ContentPage>

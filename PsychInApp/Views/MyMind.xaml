@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsychInApp.Views.MyMind"
+             Title="Psyche In"
+             BackgroundImageSource="https://i.ibb.co/G9V53S6/blur.jpg">
+
+
+    <StackLayout>
+        <StackLayout HorizontalOptions="Center" Margin="10">
+            <Label Text="Mis Pensamientos "
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    FontSize="25" 
+                    TextColor="Black"/>
+            <Label Text="Aquí puedes plasmar lo que está en tu mente en palabras y conocerte."
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center" 
+                   FontSize="16" 
+                   TextColor="Black"
+                   Margin="15,5,15,10"/>         
+        </StackLayout>
+
+        <StackLayout>
+            <Image Source="https://i.ibb.co/DCRhcMw/human-brain.png" HeightRequest="180"/>
+        </StackLayout>
+
+        <Frame BackgroundColor="#fcf0ff" 
+                Margin="0"
+                Padding="0" 
+                CornerRadius="0">
+            <StackLayout>
+                <Label Text="He pensado en... " 
+                        TextColor="#a8a8a8" FontSize="16"
+                        HorizontalTextAlignment="Left" 
+                        FontAttributes="Bold"
+                        Margin="15,10,15,0"/>
+                <Frame BackgroundColor="#fcf0ff" 
+                        Margin="15"
+                        Padding="0,10,0,0" 
+                        CornerRadius="15"
+                        HeightRequest="150">
+                    <Entry x:Name="TxtPensamiento" 
+                            Text="{Binding TxtPensamiento}"
+                            TextColor="Black" 
+                            FontSize="18"
+                            HeightRequest="145"
+                            Margin="5,0,5,0"/>
+                </Frame>
+            </StackLayout>
+        </Frame>
+
+        <StackLayout Margin="0,10">
+            <Button x:Name="GuardarPens" Clicked="GuardarPens_Clicked"
+            BackgroundColor="#659db3" TextColor="White"
+            Text="Guardar" HorizontalOptions="Center" />
+        </StackLayout>
+
+
+    </StackLayout>
+
+    
+</ContentPage>
+    
+ 
